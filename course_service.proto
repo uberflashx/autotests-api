@@ -7,9 +7,9 @@ message GetCourseRequest {
 }
 
 message GetCourseResponse {
-    string course_id = "api-course";
-    string title = "Автотесты API";
-    string description = "Будем изучать написание API автотестов";
+    string course_id = 1;
+    string title = 2;
+    string description = 3;
 }
 
 service CourseService {
