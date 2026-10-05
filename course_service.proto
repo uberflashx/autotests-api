@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package courseservice;
+
+message GetCourseRequest {
+    string course_id = 1;
+}
+
+message GetCourseResponse {
+    string course_id = "api-course";
+    string title = "Автотесты API";
+    string description = "Будем изучать написание API автотестов";
+}
+
+service CourseService {
+    rpc GetCourse (GetCourseRequest) returns (GetCourseResponse);
+}
