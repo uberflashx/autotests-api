@@ -1,12 +1,15 @@
 import httpx
 
-payload = {
-    "email": "test.1792488613.031272@example.com",
+login_payload = {
+    "email": "user@example.com",
     "password": "string"
 }
 
-login_response = httpx.post("http://localhost:8000/api/v1/authentication/login", json=payload)
+login_response = httpx.post("http://localhost:8000/api/v1/authentication/login", json=login_payload)
 login_response_data = login_response.json()
+
+print("Login response:", login_response_data)
+print("Status Code:", login_response.status_code)
 
 refresh_payload = {
     "refreshToken": login_response_data["token"]["refreshToken"]
