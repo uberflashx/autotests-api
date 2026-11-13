@@ -5,6 +5,9 @@ from clients.public_http_builder import get_public_http_client
 
 
 class Token(TypedDict):
+    """
+    Описание структуры аутентификационных токенов.
+    """
     tokenType: str
     accessToken: str
     refreshToken: str
@@ -17,6 +20,9 @@ class LoginRequestDict(TypedDict):
     password: str
 
 class LoginResponseDict(TypedDict):
+    """
+    Описание структуры ответа аутентификации.
+    """
     token: Token
 
 class RefreshRequestDict(TypedDict):
