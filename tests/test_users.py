@@ -18,3 +18,5 @@ def test_create_user():
 
     validate_json_schema(instance=response.json(), schema=response_data.model_json_schema())
 
+
+
